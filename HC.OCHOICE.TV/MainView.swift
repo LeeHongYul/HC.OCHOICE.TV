@@ -18,39 +18,62 @@ struct Result: Codable, Identifiable {
 
 struct MainView: View {
     @State private var results = [Result]()
+    @State var items: [String] = ["영화","방송","해외드라마","키즈/애니","다큐","라이프","O-FAST"]
     
     var body: some View {
            NavigationView {
-               HStack{
-                   List(results) {item in
-                       HStack {
-                           AsyncImage(url: URL(string: item.logoAccessUrl)) { phase in
-                               if let image = phase.image {
-                                   image
-                                       .resizable()
-                                       .aspectRatio(contentMode: .fit)
-                                       .frame(width: 100, height: 100)
-                               } else if phase.error != nil {
-                                   Color.red.frame(width: 50, height: 50)
-                               } else {
-                                   ProgressView()
-                                       .frame(width: 50, height: 50)
-                               }
-                           }
-                           VStack(alignment: .leading) {
-                               Text(item.name)
-                                   .font(.headline)
-                               Text(item.description)
-                                   .font(.subheadline)
+               
+               VStack{
+                   ScrollView(.horizontal) {
+                       HStack(spacing: 15) {
+                           ForEach(0..<items.count) {
+                               CardView(title: self.$items[$0])
                            }
                        }
                    }
+                   .padding()
+                   ScrollView(.horizontal) {
+                       HStack(spacing: 15) {
+                           ForEach(results, id: \.id) { result in
+                               HStack {
+                                   AsyncImage(url: URL(string: result.logoAccessUrl)) { phase in
+                                       if let image = phase.image {
+                                           image
+                                               .resizable()
+                                               .aspectRatio(contentMode: .fit)
+                                               .frame(width: 100, height: 100)
+                                       } else if phase.error != nil {
+                                           Color.red.frame(width: 50, height: 50)
+                                       } else {
+                                           ProgressView()
+                                               .frame(width: 50, height: 50)
+                                       }
+                                   }
+                                   VStack(alignment: .leading) {
+                                       Text(result.name)
+                                           .font(.headline)
+                                       Text(result.description)
+                                           .font(.subheadline)
+                                   }
+                               }
+                               .padding()
+                           }
+                       }
+                   }
+                   .padding()
                    .navigationTitle("Channels")
+                   .toolbar {
+                       ToolbarItem(placement: .navigationBarTrailing) {
+                                           Button(action: {
+                                              
+                                           }) {
+                                               Image(systemName: "magnifyingglass")
+                                           }
+                                       }
+                   }
                    .task {
                        await fetchData()
                    }
-                   
-                   Text("This is For")
                }
            }
        }
@@ -89,9 +112,4 @@ struct MainView: View {
         }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
 

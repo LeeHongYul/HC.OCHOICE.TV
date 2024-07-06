@@ -19,6 +19,11 @@
 		9B35AF7C2C2C541000B6F874 /* HC_OCHOICE_TVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35AF7B2C2C541000B6F874 /* HC_OCHOICE_TVTests.swift */; };
 		9B35AF862C2C541000B6F874 /* HC_OCHOICE_TVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35AF852C2C541000B6F874 /* HC_OCHOICE_TVUITests.swift */; };
 		9B35AF882C2C541000B6F874 /* HC_OCHOICE_TVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35AF872C2C541000B6F874 /* HC_OCHOICE_TVUITestsLaunchTests.swift */; };
+		9B3B2A1C2C38EFB1005F2E87 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B2A1B2C38EFB1005F2E87 /* CardView.swift */; };
+		9B3B2A1E2C38F4CB005F2E87 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B2A1D2C38F4CB005F2E87 /* HomeView.swift */; };
+		9B3B2A202C38F503005F2E87 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B2A1F2C38F503005F2E87 /* MyPageView.swift */; };
+		9B3B2A222C38F50F005F2E87 /* VODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B2A212C38F50F005F2E87 /* VODView.swift */; };
+		9B3B2A242C38F51F005F2E87 /* WatchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B2A232C38F51F005F2E87 /* WatchHistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		9B35AF812C2C541000B6F874 /* HC.OCHOICE.TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HC.OCHOICE.TVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B35AF852C2C541000B6F874 /* HC_OCHOICE_TVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HC_OCHOICE_TVUITests.swift; sourceTree = "<group>"; };
 		9B35AF872C2C541000B6F874 /* HC_OCHOICE_TVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HC_OCHOICE_TVUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9B3B2A1B2C38EFB1005F2E87 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9B3B2A1D2C38F4CB005F2E87 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9B3B2A1F2C38F503005F2E87 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		9B3B2A212C38F50F005F2E87 /* VODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODView.swift; sourceTree = "<group>"; };
+		9B3B2A232C38F51F005F2E87 /* WatchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +123,11 @@
 				9B341C1C2C34AF89007FC57C /* ApiError.swift */,
 				9B35AF6E2C2C541000B6F874 /* Assets.xcassets */,
 				9B35AF702C2C541000B6F874 /* Preview Content */,
+				9B3B2A1B2C38EFB1005F2E87 /* CardView.swift */,
+				9B3B2A1D2C38F4CB005F2E87 /* HomeView.swift */,
+				9B3B2A1F2C38F503005F2E87 /* MyPageView.swift */,
+				9B3B2A212C38F50F005F2E87 /* VODView.swift */,
+				9B3B2A232C38F51F005F2E87 /* WatchHistoryView.swift */,
 			);
 			path = HC.OCHOICE.TV;
 			sourceTree = "<group>";
@@ -272,12 +287,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3B2A1E2C38F4CB005F2E87 /* HomeView.swift in Sources */,
 				9B35AF6D2C2C540F00B6F874 /* ContentView.swift in Sources */,
 				9B341C172C34A7EB007FC57C /* MainView.swift in Sources */,
 				9B341C1B2C34AE92007FC57C /* ContentModel.swift in Sources */,
 				9B341C1F2C34B1D3007FC57C /* ContentViewModel.swift in Sources */,
+				9B3B2A242C38F51F005F2E87 /* WatchHistoryView.swift in Sources */,
 				9B341C192C34AADC007FC57C /* RequestAPI.swift in Sources */,
 				9B35AF6B2C2C540F00B6F874 /* HC_OCHOICE_TVApp.swift in Sources */,
+				9B3B2A202C38F503005F2E87 /* MyPageView.swift in Sources */,
+				9B3B2A1C2C38EFB1005F2E87 /* CardView.swift in Sources */,
+				9B3B2A222C38F50F005F2E87 /* VODView.swift in Sources */,
 				9B341C1D2C34AF89007FC57C /* ApiError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

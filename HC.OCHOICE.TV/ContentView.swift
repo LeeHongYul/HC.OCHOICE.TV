@@ -15,7 +15,10 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Image("ochoice")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .imageScale(.large)
+                    .frame(width: 100, height: 100, alignment: .center)
                     .foregroundStyle(.tint)
                 
                 TextField("아이디 입력", text: $username)
@@ -29,7 +32,7 @@ struct ContentView: View {
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
                 
-                NavigationLink(destination: MainView()) {
+                NavigationLink(destination: HomeView()) {
                     Text("로그인")
                         .foregroundColor(.white)
                         .padding()
