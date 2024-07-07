@@ -12,12 +12,12 @@ struct CardView: View {
     
     var body: some View {
         ZStack {
-            Color.black
-                .cornerRadius(30)
-            Text(title)
-                .padding()
+            Button {
+                
+            } label: {
+                Text(title)
+            }
         }
-        .frame(height: 50)
         .shadow(color: Color.black.opacity(0.2),radius: 5, x: 0, y: 0)
     }
 }

@@ -31,7 +31,32 @@ struct ContentView: View {
                     .padding()
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
-                
+                HStack(spacing: 50) { // spacing을 0으로 설정하여 버튼들이 붙어 있게 함
+                    Button {
+                        
+                    } label: {
+                        Text("아이디 찾기")
+                            .font(.system(size: 30)) // 폰트 크기를 작게 설정
+                    }
+                    .buttonStyle(PlainButtonStyle()) // 버튼의 기본 모양 제거
+
+                    Button {
+                        
+                    } label: {
+                        Text("비밀번호 찾기")
+                            .font(.system(size: 30)) // 폰트 크기를 작게 설정
+                    }
+                    .buttonStyle(PlainButtonStyle()) // 버튼의 기본 모양 제거
+
+                    Button {
+                        
+                    } label: {
+                        Text("회원 가입")
+                            .font(.system(size: 30)) // 폰트 크기를 작게 설정
+                    }
+                    .buttonStyle(PlainButtonStyle()) // 버튼의 기본 모양 제거
+                }
+
                 NavigationLink(destination: HomeView()) {
                     Text("로그인")
                         .foregroundColor(.white)
@@ -40,7 +65,6 @@ struct ContentView: View {
                 }
             }
             .padding()
-            .navigationTitle("로그인")
         }
     }
 }
