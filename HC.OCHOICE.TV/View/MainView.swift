@@ -9,7 +9,7 @@ struct MainView: View {
         NavigationView {
             ScrollView(.vertical){
                 ScrollView(.horizontal) {
-                    HStack(spacing: 15) {
+                    HStack(spacing: 20) {
                         ForEach(0..<items.count, id: \.self) { index in
                             CardView(title: self.$items[index])
                         }
@@ -99,7 +99,7 @@ struct MainView: View {
                                                             AsyncImage(url: URL(string: item.posterUrl)) { image in
                                                                 image.resizable()
                                                                     .aspectRatio(contentMode: .fill)
-                                                                    .frame(width: 200, height: 200)
+                                                                    .frame(width: 200, height: 300)
                                                                     .cornerRadius(15)
                                                             } placeholder: {
                                                                 ProgressView()
