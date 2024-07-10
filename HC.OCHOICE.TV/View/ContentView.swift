@@ -56,13 +56,17 @@ struct ContentView: View {
                     }
                     .buttonStyle(PlainButtonStyle()) // 버튼의 기본 모양 제거
                 }
+                .focusSection()
 
-                NavigationLink(destination: HomeView()) {
-                    Text("로그인")
-                        .foregroundColor(.white)
-                        .padding()
-                        .cornerRadius(10)
+                HStack{
+                    NavigationLink(destination: HomeView()) {
+                        Text("로그인")
+                            .foregroundColor(.white)
+                            .padding()
+                            .cornerRadius(10)
+                    }
                 }
+                .focusSection()
             }
             .padding()
         }
